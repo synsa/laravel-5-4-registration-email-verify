@@ -2,9 +2,15 @@
 
 namespace App\Http\Controllers\Auth;
 
+use DB;
+use Mail;
+use Session;
+use Illuminate\Http\Request;
+use App\Mail\EmailVerification;
 use App\User;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Validator;
+//use Illuminate\Support\Facades\Validator;
+use Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
@@ -66,6 +72,49 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'email_token' => str_random(10),
         ]);
     }
+
+/**
+*  Overwriting the register method from the "RegistersUsers" trait
+*  Remember to take care while upgrading laravel
+*/
+    public function register(Request $request)
+{
+    // Laravel validation
+    $validator = $this->validator($request->all());
+    if ($validator->fails())
+    {
+        $this->throwValidationException($request, $validator);
+    }
+
+    DB::beginTransaction();
+    try
+    {
+        $user = $this->create($request->all());
+        // After creating the user send an email with the random token generated in the create method above
+        $email = new EmailVerification(new User(['email_token' => $user->email_token]));
+        Mail::to($user->email)->send($email);
+        DB::commit();
+        Session::flash('message', 'We have sent you a verification email');
+        return back();
+    }
+    catch(Exception $e)
+    {
+        DB::rollback();
+        return back();
+    }
+}
+
+    // Get the user who has the same token and change his/her status to verified i.e. 1
+    public function verify($token)
+    {
+       // The verified method has been added to the user model and chained here
+       // for better readability
+       User::where('email_token', $token)->firstOrFail()->verified();
+       Session::flash('message', 'Success! Your account is confirmed. Please log in.');
+       return redirect('login');
+    }
+
 }
