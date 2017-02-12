@@ -10,8 +10,8 @@
 How to use:<br> 
 In phpMyAdmin create a database called 'mylar'<br>
 
-$ git clone https://github.com/mrvlopez/laravel-5-4-registration-system.git<br>
-$ cd laravel-5-4-registration-system<br>
+$ git clone https://github.com/mrvlopez/laravel-5-4-registration-email-verify.git<br>
+$ cd laravel-5-4-registration-email-verify<br>
 $ yarn install<br> 
 $ composer install<br>
 
