@@ -7,19 +7,19 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-How to use: 
-In phpMyAdmin create a database called 'mylar'
+How to use:<br> 
+In phpMyAdmin create a database called 'mylar'<br>
 
-$ composer create-project --prefer-dist laravel/laravel mylar
-$ cd mylar
-$ yarn install  
-$ composer install
+$ composer create-project --prefer-dist laravel/laravel mylar<br>
+$ cd mylar<br>
+$ yarn install<br>  
+$ composer install<br>
 
-Set up .env file with all proper credentials for database and mailtrap. APP_Key should already be there.
-IMPORTANT - Laravel defaults to MAIL_PORT=2525 in .env file but MAIL_PORT=465 is what worked for me.
-$ php artisan make:auth
-$ php artisan migrate
-$ php artisan serve
+<p>Set up .env file with all proper credentials for database and mailtrap. APP_Key should already be there.
+IMPORTANT - Laravel defaults to MAIL_PORT=2525 in .env file but MAIL_PORT=465 is what worked for me.</p>
+$ php artisan make:auth<br>
+$ php artisan migrate<br>
+$ php artisan serve<br>
 
 ## About Laravel
 
