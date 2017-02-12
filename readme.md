@@ -7,6 +7,20 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+How to use: 
+In phpMyAdmin create a database called 'mylar'
+
+$ composer create-project --prefer-dist laravel/laravel mylar
+$ cd mylar
+$ yarn install  
+$ composer install
+
+Set up .env file with all proper credentials for database and mailtrap. APP_Key should already be there.
+IMPORTANT - Laravel defaults to MAIL_PORT=2525 in .env file but MAIL_PORT=465 is what worked for me.
+$ php artisan make:auth
+$ php artisan migrate
+$ php artisan serve
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
