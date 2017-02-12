@@ -12,7 +12,7 @@ In phpMyAdmin create a database called 'mylar'<br>
 
 $ composer create-project --prefer-dist laravel/laravel mylar<br>
 $ cd mylar<br>
-$ yarn install<br>  
+$ yarn install<br> 
 $ composer install<br>
 
 <p>Set up .env file with all proper credentials for database and mailtrap. APP_Key should already be there.
