@@ -8,7 +8,7 @@
 </p>
 
 How to use:<br> 
-In phpMyAdmin create a database called 'mylar'<br>
+In phpMyAdmin create an empty database<br>
 
 $ git clone https://github.com/mrvlopez/laravel-5-4-registration-email-verify.git<br>
 $ cd laravel-5-4-registration-email-verify<br>
