@@ -15,7 +15,8 @@ $ cd laravel-5-4-registration-system<br>
 $ yarn install<br> 
 $ composer install<br>
 
-<p>Set up .env file with all proper credentials for database and mailtrap.<br>
+<p>Change .env.example to .env<br>
+Set up .env file with all proper credentials for database and mailtrap.<br>
 IMPORTANT - Laravel defaults to MAIL_PORT=2525 in .env file but MAIL_PORT=465 is what worked for me.</p>
 $ php artisan make:auth<br>
 $ php artisan migrate<br>
