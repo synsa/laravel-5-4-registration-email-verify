@@ -19,3 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('register/verify/{token}', 'Auth\RegisterController@verify');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
