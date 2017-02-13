@@ -6,20 +6,26 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
+<h3>Laravel 5.4 Login and Registration System with Mailtrap Email Verification</h3>
+
 
 How to use:<br> 
-In phpMyAdmin create a database called 'mylar'<br>
+In phpMyAdmin create an empty database<br>
 
-$ composer create-project --prefer-dist laravel/laravel mylar<br>
-$ cd mylar<br>
+$ git clone https://github.com/mrvlopez/laravel-5-4-registration-email-verify.git<br>
+$ cd laravel-5-4-registration-email-verify<br>
 $ yarn install<br> 
 $ composer install<br>
 
-<p>Set up .env file with all proper credentials for database and mailtrap. APP_Key should already be there.
+<p>Copy the contents of .env.example into a new .env file<br>
+Set up .env file with all proper credentials for database and mailtrap.<br>
 IMPORTANT - Laravel defaults to MAIL_PORT=2525 in .env file but MAIL_PORT=465 is what worked for me.</p>
 $ php artisan make:auth<br>
 $ php artisan migrate<br>
+$ php artisan key:generate<br>
 $ php artisan serve<br>
+
+
 
 ## About Laravel
 
