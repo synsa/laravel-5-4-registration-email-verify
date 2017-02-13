@@ -6,6 +6,8 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
+<h3>Laravel 5.4 Login and Registration System with Mailtrap Email Verification</h3>
+
 
 How to use:<br> 
 In phpMyAdmin create an empty database<br>
@@ -25,7 +27,6 @@ $ php artisan serve<br>
 
 
 
-h3>Laravel 5.4 Login and Registration System with Mailtrap Email Verification</h3>
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
